@@ -1,0 +1,60 @@
+<html>
+<body>
+
+<div id="divMain"></div>
+
+<script type="text/javascript" src="ArrayHelper.js"></script>
+<script type="text/javascript" src="Bounds.js"></script>
+<script type="text/javascript" src="Collision.js"></script>
+<script type="text/javascript" src="Coords.js"></script>
+<script type="text/javascript" src="DemoData.js"></script>
+<script type="text/javascript" src="Display.js"></script>
+<script type="text/javascript" src="Globals.js"></script>
+<script type="text/javascript" src="InputHelper.js"></script>
+<script type="text/javascript" src="Level.js"></script>
+<script type="text/javascript" src="LevelDefn.js"></script>
+<script type="text/javascript" src="Obstacle.js"></script>
+<script type="text/javascript" src="ObstacleDefn.js"></script>
+<script type="text/javascript" src="Polar.js"></script>
+<script type="text/javascript" src="Range.js"></script>
+<script type="text/javascript" src="ShapeCircle.js"></script>
+<script type="text/javascript" src="ShapeRectangle.js"></script>
+<script type="text/javascript" src="Status.js"></script>
+<script type="text/javascript" src="Train.js"></script>
+<script type="text/javascript" src="TrainCar.js"></script>
+<script type="text/javascript" src="TrainCarDefn.js"></script>
+<script type="text/javascript" src="TrainDefn.js"></script>
+<script type="text/javascript" src="URLHelper.js"></script>
+<script type="text/javascript" src="World.js"></script>
+
+<script type="text/javascript">
+
+// main
+
+function main()
+{
+	var display = new Display
+	(
+		new Coords(300, 300),
+		"Gray", // colorFore
+		"White", // colorBack
+		10 // fontHeightInPixels
+	);
+
+	var world = new DemoData().world();
+
+	Globals.Instance.initialize
+	(
+		30, // timerTicksPerSecond
+		display,
+		world
+	);
+}
+
+// run
+
+main();
+
+</script>
+</body>
+</html>
